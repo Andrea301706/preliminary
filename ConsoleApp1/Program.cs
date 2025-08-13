@@ -72,3 +72,35 @@ switch (choice)
         break;
 }
 
+Console.Write("Enter your age: ");
+int age = int.Parse(Console.ReadLine());
+
+Console.Write("Do you have parental consent? (yes/no): ");
+string consent = Console.ReadLine().ToLower();
+
+Console.Write("Do you have an ID? (yes/no): ");
+string hasID = Console.ReadLine().ToLower();
+
+if (age >= 18)
+{
+    if (hasID == "yes")
+    {
+        Console.WriteLine("Allowed");
+    }
+    else
+    {
+        Console.WriteLine("Not allowed");
+    }
+}
+else // under 18
+{
+    if (consent == "yes" && hasID == "yes")
+    {
+    
+        Console.WriteLine("Allowed with guardian");
+    }
+    else
+    {
+        Console.WriteLine("Not allowed");
+    }
+}
