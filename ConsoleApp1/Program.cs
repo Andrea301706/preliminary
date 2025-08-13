@@ -39,3 +39,36 @@
 
         Console.WriteLine("Your total ticket price is: ₱" + ticketPrice);
     
+
+
+Console.WriteLine("Pick a snack (1–4):");
+Console.WriteLine("1. Popcorn");
+Console.WriteLine("2. Soda");
+Console.WriteLine("3. Nachos");
+Console.WriteLine("4. Candy");
+
+Console.Write("Enter your choice: ");
+int choice;
+
+if (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > 4)
+{
+    Console.WriteLine("Invalid input! Please enter a number between 1 and 4.");
+    return;
+}
+
+switch (choice)
+{
+    case 1:
+        Console.WriteLine("Popcorn - Price: ₱80, Calories: 250 kcal");
+        break;
+    case 2:
+        Console.WriteLine("Soda - Price: ₱50, Calories: 150 kcal");
+        break;
+    case 3:
+        Console.WriteLine("Nachos - Price: ₱120, Calories: 370 kcal");
+        break;
+    case 4:
+        Console.WriteLine("Candy - Price: ₱30, Calories: 120 kcal");
+        break;
+}
+
